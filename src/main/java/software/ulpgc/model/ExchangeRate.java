@@ -15,7 +15,7 @@ public class ExchangeRate {
         this.rate = rate;
     }
 
-    public LocalDate getDate() {<
+    public LocalDate getDate() {
         return date;
     }
 
