@@ -45,10 +45,6 @@ public class FixerExchangeRateLoader implements ExchangeRateLoader {
         return rate;
     }
 
-    /*
-          The API that I use to change currency only works with respect to the EUR, so I will have to calculate it with
-          respect to that currency to later make the exchange rate.
-       */
     private String fromJson() throws IOException{
         URL url = new URL("http://data.fixer.io/api/latest?access_key=" + FixerAPI.key + "&symbols="+from.symbol()+","+to.symbol());
         try(InputStream is = url.openStream()) {
